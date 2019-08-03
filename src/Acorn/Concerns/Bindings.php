@@ -140,7 +140,7 @@ trait Bindings
     protected function registerCacheBindings()
     {
         $this->singleton('cache', function () {
-            return $this->loadComponent('cache', \Illuminate\Cache\CacheServiceProvider::class);
+            return $this->loadComponent('cache', \Illuminate\Cache\CacheServiceProvider::class, 'cache');
         });
 
         $this->singleton('cache.store', function () {
